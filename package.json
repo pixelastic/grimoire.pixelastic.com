@@ -1,40 +1,31 @@
 {
   "name": "grimoire.pixelastic.com",
   "version": "0.0.1",
+  "private": true,
   "type": "module",
-  "description": "grimoire.pixelastic.com module",
+  "description": "Grimoire - Découvertes de jeux de rôle",
   "author": "pixelastic",
   "homepage": "https://github.com/pixelastic/grimoire.pixelastic.com",
-  "keywords": [
-    "grimoire.pixelastic.com"
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/pixelastic/grimoire.pixelastic.com"
   },
-  "sideEffects": false,
   "license": "MIT",
   "engines": {
     "node": ">=22.18.0"
   },
   "packageManager": "yarn@4.12.0",
-  "files": [
-    "./lib/*.js"
-  ],
-  "exports": {
-    ".": "./lib/main.js"
-  },
-  "main": "./lib/main.js",
   "devDependencies": {
-    "aberlaas": "2.35.0"
+    "aberlaas": "2.35.0",
+    "vitepress": "1.6.4",
+    "vue": "3.5.32"
   },
   "scripts": {
+    "build": "./scripts/build",
     "ci": "./scripts/ci",
-    "compress": "./scripts/compress",
     "lint": "./scripts/lint",
     "lint:fix": "./scripts/lint-fix",
-    "release": "./scripts/release",
-    "test": "./scripts/test",
-    "test:watch": "./scripts/test-watch"
+    "preview": "./scripts/preview",
+    "serve": "./scripts/serve"
   }
 }

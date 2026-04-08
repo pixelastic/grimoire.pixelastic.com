@@ -1,0 +1,16 @@
+# Build website
+[build]
+  command = "yarn run build"
+  publish = "./dist/"
+
+# Terry Pratchett homage
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Clacks-Overhead = "GNU Terry Pratchett"
+
+# SPA fallback for clean URLs
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

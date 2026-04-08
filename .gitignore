@@ -6,6 +6,8 @@
 build/
 dist/
 tmp/
+.vitepress/cache/
+.vitepress/dist/
 
 # Junk files
 .DS_Store
