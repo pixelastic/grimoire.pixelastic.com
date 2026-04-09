@@ -21,11 +21,13 @@
     "vue": "3.5.32"
   },
   "scripts": {
+    "agent:delete-orphaned-images": "./scripts/agent/delete-orphaned-images",
     "build": "./scripts/build",
     "ci": "./scripts/ci",
     "lint": "./scripts/lint",
     "lint:fix": "./scripts/lint-fix",
     "preview": "./scripts/preview",
-    "serve": "./scripts/serve"
+    "serve": "./scripts/serve",
+    "writing-buddy": "./scripts/writing-buddy"
   }
 }
