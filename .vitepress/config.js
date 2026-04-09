@@ -13,8 +13,13 @@ export default defineConfig({
     sidebar: {
       '/posts/': [
         {
-          text: 'Posts',
-          items: [{ text: 'Mars 2026', link: '/posts/2026-03/' }],
+          text: 'Inspirations',
+          items: [
+            {
+              text: 'Terrain Crafting Inspirations',
+              link: '/posts/inspirations/2022-01/',
+            },
+          ],
         },
       ],
     },

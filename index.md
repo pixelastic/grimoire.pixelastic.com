@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: Voir les posts
-      link: /posts/2026-03/
+      link: /posts/inspirations/2022-01/
 
 features:
   - title: 📖 Recueil de découvertes
@@ -21,4 +21,4 @@ features:
 
 ## Derniers posts
 
-- [Mars 2026](/posts/2026-03/) - Premières découvertes
+- [Terrain Crafting Inspirations](/posts/inspirations/2022-01/) - Screenshots de techniques simples de terrain
