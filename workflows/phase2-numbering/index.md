@@ -13,16 +13,16 @@
 2. **Execute in parallel** (use multiple tool calls in a single message):
 
    **A. Delete orphan images (Bash tool)**:
-   - Run `yarn run agent:delete-orphaned-images posts/<slug>/`
+   - Run `yarn run agent:delete-orphaned-images posts/<inspirations|reviews>/<slug>/`
    - This script removes any image files NOT referenced in `index.md`
-   - These are copy-paste mistakes
+   - These are copy-paste mistakes or replaced images
 
    **B. Prepare numbered content (in memory)**:
    - Build the new `index.md` content with HTML comments
    - Add `<!-- Image N -->` above each image reference
 
    **C. Compress remaining images (Bash tool, background)**:
-   - Run `imgmin posts/<slug>/*.{png,jpg}` with `run_in_background: true`
+   - Run `imgmin posts/<inspirations|reviews>/<slug>/*.{png,jpg}` with `run_in_background: true`
    - This runs while the user describes images
    - No need to wait or report completion
 
@@ -50,12 +50,14 @@
 ## How to Execute
 
 Use **multiple tool calls in a single message** for efficiency:
-1. `Read` index.md to extract image references
+1. `Read` index.md to extract image references (get full path from conversation context)
 2. In parallel:
-   - `Bash` to run `yarn run agent:delete-orphaned-images posts/<slug>/`
+   - `Bash` to run `yarn run agent:delete-orphaned-images posts/<inspirations|reviews>/<slug>/`
    - `Bash` with `run_in_background: true` to compress remaining images with imgmin
    - Prepare numbered content mentally
 3. `Edit` index.md once with numbered content
+
+**Note**: The correct path (inspirations vs reviews) should be known from Phase 1 context.
 
 ---
 

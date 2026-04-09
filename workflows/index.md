@@ -19,10 +19,18 @@ Only do something else if user explicitly requests a different phase (update pos
 
 ## Directory Structure
 
-Posts live at:
+Posts are organized by type:
+
+**Inspirations** (monthly collections):
 ```
-posts/<post-slug>/index.md
-posts/<post-slug>/<image-files>
+posts/inspirations/YYYY-MM/index.md
+posts/inspirations/YYYY-MM/<image-files>
+```
+
+**Reviews** (permanent content):
+```
+posts/reviews/<slug>/index.md
+posts/reviews/<slug>/<image-files>
 ```
 
 Images are auto-saved by Typora when copy-pasted.
@@ -47,17 +55,25 @@ Valid tags: (to be defined as you write posts)
 
 ---
 
+## Post Type Detection
+
+**Inspirations** (monthly): User mentions month/date OR says "inspiration"
+- Creates: `posts/inspirations/YYYY-MM/`
+- Examples: "nouveau post janvier 2022", "inspirations february 2024"
+
+**Reviews** (all other cases): Specific subject/module name
+- Creates: `posts/reviews/<camelCaseSlug>/`
+- Examples: "review Tomb of Annihilation", "post sur Hot Springs Island"
+
+Phase 1 detects automatically - no need to specify type explicitly.
+
+---
+
 ## Finding Existing Posts
 
-**Important**: Slugs are in ENGLISH, even when user describes in French.
+Slugs are in ENGLISH, even when user describes in French.
 
-Examples:
-- "tables de rencontre urbaines" → `urbanEncounterTables/`
-- "mécaniques de mort" → `deathMechanics/`
-
-**Search strategy**:
-1. List posts: `ls posts/`
-2. Search by English keywords in slugs or file contents
+**Search**: `ls posts/inspirations/` or `ls posts/reviews/`
 
 ---
 
