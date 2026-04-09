@@ -24,6 +24,7 @@
     "agent:delete-orphaned-images": "./scripts/agent/delete-orphaned-images",
     "build": "./scripts/build",
     "ci": "./scripts/ci",
+    "compress": "./scripts/compress",
     "lint": "./scripts/lint",
     "lint:fix": "./scripts/lint-fix",
     "preview": "./scripts/preview",

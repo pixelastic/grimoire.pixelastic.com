@@ -45,7 +45,7 @@ The glossary may be empty initially - it will be filled over time with RPG-speci
 
 **Length**: 2-4 sentences
 
-**Placement**: Directly after Image 1 (Image 1 serves as the header)
+**Placement**: At the very top, BEFORE all images
 
 ### What to Include
 
@@ -59,6 +59,8 @@ The glossary may be empty initially - it will be filled over time with RPG-speci
 - Write a straightforward intro
 - Don't overthink the style
 - Just set up the story
+- If user already described an intro in their French narration, use that
+- If not, infer one from the overall content
 
 ---
 
@@ -94,10 +96,12 @@ tags: []
 description: ""
 ---
 
+<intro paragraph - 2-4 sentences, BEFORE images>
+
 <!-- Image 1 -->
 ![](image-YYYYMMDDHHMMSS.png)
 
-<brief intro - 1-2 sentences>
+<description for image 1>
 
 <!-- Image 2 -->
 ![](image-YYYYMMDDHHMMSS.png)
@@ -111,15 +115,15 @@ description: ""
 
 ...
 
-<conclusion - 1 sentence, OPTIONAL>
+<conclusion paragraph - 2-4 sentences>
 ```
 
 ### Critical Rules
 
-1. **Image 1 is the header** - appears only ONCE
-2. **Intro goes after Image 1** - not before it (2-4 sentences)
+1. **Intro goes BEFORE all images** - not after Image 1
+2. **ALL images get descriptions** - including Image 1
 3. **NO duplicate images**
-4. **NO italic text** - Write descriptions as regular paragraphs without `_underscores_` or `*asterisks*` (only use italic for book titles)
+4. **NO italic text** - Write descriptions as regular paragraphs (only use italic for book titles)
 5. **First person voice** - "I usually run", not "you usually run"
 
 ---
