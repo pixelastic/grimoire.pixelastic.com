@@ -1,7 +1,7 @@
 # Reviews
 
-Critiques et analyses de modules, règles et suppléments de jeux de rôle.
+Reviews and analysis of tabletop RPG modules, rules, and supplements.
 
-## Dernières reviews
+## Latest reviews
 
-_(Aucune review pour le moment)_
+_(No reviews yet)_

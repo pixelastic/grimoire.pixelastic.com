@@ -1,7 +1,7 @@
 # Inspirations
 
-Screenshots et découvertes au fil de mes lectures de jeux de rôle.
+Screenshots and discoveries from my tabletop RPG readings.
 
-## Dernières inspirations
+## Latest inspirations
 
-- [Terrain Crafting Inspirations](/posts/inspirations/2022-01/) - Screenshots de techniques simples de terrain (Janvier 2022)
+- [Terrain Crafting Inspirations](/posts/inspirations/2022-01/) - Screenshots of simple terrain techniques (January 2022)

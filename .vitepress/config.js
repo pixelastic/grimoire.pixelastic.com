@@ -2,11 +2,11 @@ import { defineConfig } from 'vitepress';
 
 export default defineConfig({
   title: 'Grimoire',
-  description: 'Découvertes de jeux de rôle',
+  description: 'Tabletop RPG discoveries',
 
   themeConfig: {
     nav: [
-      { text: 'Accueil', link: '/' },
+      { text: 'Home', link: '/' },
       { text: 'Inspirations', link: '/inspirations/' },
       { text: 'Reviews', link: '/reviews/' },
       { text: 'About', link: '/about' },

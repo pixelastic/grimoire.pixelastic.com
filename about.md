@@ -1,12 +1,12 @@
 # About
 
-Un grimoire personnel pour capturer mes découvertes dans l'univers du jeu de rôle médiéval fantastique.
+A personal grimoire to capture my discoveries in the medieval fantasy tabletop RPG universe.
 
-## Ce que tu trouveras ici
+## What you'll find here
 
-- **Inspirations** : Des screenshots et notes rapides sur ce qui me marque au fil de mes lectures
-- **Reviews** : Des analyses plus détaillées de modules et suppléments
+- **Inspirations**: Screenshots and quick notes about what strikes me in my readings
+- **Reviews**: More detailed analysis of modules and supplements
 
-## Pourquoi ce blog ?
+## Why this blog?
 
-Une barrière d'entrée minimale pour capturer l'inspiration du moment, sans me prendre la tête.
+A minimal barrier to entry to capture inspiration in the moment, without overthinking it.
