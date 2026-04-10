@@ -4,11 +4,7 @@
     <p class="tagline">{{ tagline }}</p>
 
     <div v-if="paginatedPosts.length > 0" class="posts-container">
-      <article
-        v-for="post in paginatedPosts"
-        :key="post.url"
-        class="post"
-      >
+      <article v-for="post in paginatedPosts" :key="post.url" class="post">
         <header class="post-header">
           <h2>
             <a :href="post.url" class="post-title">{{ post.title }}</a>
@@ -36,8 +32,7 @@
       <button
         @click="goToPage(currentPage - 1)"
         :disabled="currentPage === 1"
-        class="pagination-button"
-      >
+        class="pagination-button">
         ← Previous
       </button>
       <span class="pagination-info">
@@ -46,8 +41,7 @@
       <button
         @click="goToPage(currentPage + 1)"
         :disabled="currentPage === totalPages"
-        class="pagination-button"
-      >
+        class="pagination-button">
         Next →
       </button>
     </nav>
@@ -55,7 +49,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue';
+import { computed, onMounted, ref } from 'vue';
 import { data as allPosts } from '../posts.data.js';
 
 const props = defineProps({

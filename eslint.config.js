@@ -5,4 +5,10 @@ export default [
   {
     ignores: ['.vitepress/cache/*', '.vitepress/dist/*', 'dist/*'],
   },
+  {
+    files: ['.vitepress/theme/**/*.vue', '.vitepress/theme/**/*.js'],
+    rules: {
+      'import/named': 'off', // VitePress generates exports dynamically
+    },
+  },
 ];

@@ -4,10 +4,15 @@
       <div v-if="isPost" class="post-header">
         <h1 class="post-title">{{ frontmatter.title }}</h1>
         <div v-if="frontmatter.date || frontmatter.tags" class="post-meta">
-          <time v-if="frontmatter.date" :datetime="frontmatter.date" class="post-date">
+          <time
+            v-if="frontmatter.date"
+            :datetime="frontmatter.date"
+            class="post-date">
             {{ formatDate(frontmatter.date) }}
           </time>
-          <span v-if="frontmatter.tags && frontmatter.tags.length > 0" class="post-tags">
+          <span
+            v-if="frontmatter.tags && frontmatter.tags.length > 0"
+            class="post-tags">
             <span v-for="tag in frontmatter.tags" :key="tag" class="tag">
               #{{ tag }}
             </span>
@@ -19,8 +24,8 @@
 </template>
 
 <script setup>
-import DefaultTheme from 'vitepress/theme';
 import { useData } from 'vitepress';
+import DefaultTheme from 'vitepress/theme';
 import { computed } from 'vue';
 
 const { Layout } = DefaultTheme;
