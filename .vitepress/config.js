@@ -7,22 +7,10 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: 'Accueil', link: '/' },
-      { text: 'Posts', link: '/posts/' },
+      { text: 'Inspirations', link: '/inspirations/' },
+      { text: 'Reviews', link: '/reviews/' },
+      { text: 'About', link: '/about' },
     ],
-
-    sidebar: {
-      '/posts/': [
-        {
-          text: 'Inspirations',
-          items: [
-            {
-              text: 'Terrain Crafting Inspirations',
-              link: '/posts/inspirations/2022-01/',
-            },
-          ],
-        },
-      ],
-    },
 
     socialLinks: [
       {
