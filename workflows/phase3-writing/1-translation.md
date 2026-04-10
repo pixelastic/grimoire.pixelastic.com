@@ -4,16 +4,34 @@
 
 1. **Parse the text** and extract all references to image numbers
 
-2. **Group the text by image number**
+2. **Identify image groups** - Look for these patterns:
 
-3. **Check for missing descriptions**:
+   **Explicit grouping phrases:**
+   - "Les images 1, 2 et 3" / "Images 1, 2 and 3"
+   - "L'image 1, l'image 2 et l'image 3"
+   - "Images 4-7" / "Images 4 à 7"
+
+   **Contextual grouping:**
+   - Multiple consecutive images mentioned in the same sentence/paragraph
+   - Example: "L'image 1, l'image 2 et l'image 3, c'est des machines de guerre parce que..."
+   - This means images 1-3 share one description and should be in `<ImageGallery>`
+
+   **Single images:**
+   - Each image has its own dedicated paragraph/description
+   - These remain standalone (no `<ImageGallery>`)
+
+3. **Group the text by image number or group**
+   - Create a mapping: `{imageNumbers: [1,2,3], description: "text about all three"}`
+   - Or: `{imageNumbers: [15], description: "text about just this one"}`
+
+4. **Check for missing descriptions**:
    - If some images have no description, ask:
    **"Je n'ai pas de description pour l'image X et l'image Y. Tu veux ajouter quelque chose, ou on les laisse sans texte ?"**
 
-4. **Clarify if needed**:
+5. **Clarify if needed**:
    - If something is unclear or ambiguous, ask for clarification BEFORE translating
 
-5. **Once confirmed**, proceed to Step 2
+6. **Once confirmed**, proceed to Step 2
 
 ---
 
@@ -88,6 +106,34 @@ These tables stayed in my mind for quite a while. I eventually used them in my u
 
 ### Structure
 
+For **single images**:
+```markdown
+<!-- Image 1 -->
+![](image-YYYYMMDDHHMMSS.png)
+
+<description for image 1>
+```
+
+For **grouped images** (multiple images with shared description):
+```markdown
+<ImageGallery>
+
+<!-- Image 2 -->
+![](image-YYYYMMDDHHMMSS.png)
+
+<!-- Image 3 -->
+![](image-YYYYMMDDHHMMSS.png)
+
+<!-- Image 4 -->
+![](image-YYYYMMDDHHMMSS.png)
+
+</ImageGallery>
+
+<shared description for images 2, 3, and 4>
+```
+
+### Full Document Structure
+
 ```markdown
 ---
 title: "<Title in English>"
@@ -103,15 +149,17 @@ description: ""
 
 <description for image 1>
 
+<ImageGallery>
+
 <!-- Image 2 -->
 ![](image-YYYYMMDDHHMMSS.png)
-
-<description for image 2>
 
 <!-- Image 3 -->
 ![](image-YYYYMMDDHHMMSS.png)
 
-<description for image 3>
+</ImageGallery>
+
+<shared description for images 2-3>
 
 ...
 
@@ -125,6 +173,8 @@ description: ""
 3. **NO duplicate images**
 4. **NO italic text** - Write descriptions as regular paragraphs (only use italic for book titles)
 5. **First person voice** - "I usually run", not "you usually run"
+6. **ImageGallery for groups** - When multiple images share a description, wrap them in `<ImageGallery>` tags with the description AFTER the closing tag
+7. **Standalone for singles** - Single images with their own description don't use ImageGallery
 
 ---
 
